@@ -29,8 +29,6 @@ services:
     environment:
       - DATABASE_URL=postgresql://user:password@db:5432/deepseekers
       - REDIS_URL=redis://redis:6379
-    volumes:
-      - ./apps:/app
     command: uvicorn main:app --host 0.0.0.0 --port 8000
 
 volumes:
